@@ -1,5 +1,5 @@
-import "./styles/main.css";
 import "./globals.css";
+import "./styles/main.css";
 
 export const metadata = {
   title: "Te Amo Hospitality - Comfort Meets Elegance",
