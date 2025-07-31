@@ -1,11 +1,9 @@
 "use client";
-import Image from "next/image";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 import { useEffect, useState, useRef } from "react";
 
 export default function Home() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const headerRef = useRef(null);
-
   useEffect(() => {
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -30,14 +28,6 @@ export default function Home() {
         backgroundText.style.transform = `translate(-50%, -50%) translateY(${
           scrolled * 0.3
         }px)`;
-      }
-
-      if (headerRef.current) {
-        if (scrolled > 50) {
-          headerRef.current.classList.add("header-scrolled");
-        } else {
-          headerRef.current.classList.remove("header-scrolled");
-        }
       }
     };
 
@@ -64,41 +54,12 @@ export default function Home() {
 
   return (
     <>
-      {/* Header */}
-      <header className="header" ref={headerRef}>
-        <div className="header-content">
-          <nav>
-            <ul className="nav-left">
-              <li>
-                <a href="#home">Home</a>
-              </li>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#services">Services</a>
-              </li>
-            </ul>
-          </nav>
-
-          <div className="logo-container">
-            <div className="logo-circle"></div>
-          </div>
-
-          <div className="nav-right">
-            <a href="#contact">Contact</a>
-            <div className="social-icons">
-              <span>📞</span>
-              <span>📧</span>
-              <span>🌐</span>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
-      <section id="home" className="hero-section">
-        <div className="hero-background-text">Te Amo Hospitality</div>
+      {/* <section id="home" className="hero-section"> */}
+      {/* <div className="hero-background-text">Te Amo Hospitality</div> */}
+      {/* <img src="https://files.cdn-files-a.com/uploads/11056245/2000_68883c1d0c0b3.jpg" />
         <div className="hero-content">
           <h1 className="hero-title">Comfort Meets Elegance</h1>
           <p className="hero-subtitle">
@@ -106,7 +67,9 @@ export default function Home() {
             personalized stay.
           </p>
         </div>
-      </section>
+      </section> */}
+
+      <Hero />
 
       {/* About Section */}
       <section id="about" className="about-section">
