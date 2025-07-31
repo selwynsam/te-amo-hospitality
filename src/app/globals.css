@@ -12,12 +12,18 @@ body {
 }
 
 h2 {
+  color: #000;
   font-family: var(--font-caladea), Arial, sans-serif;
+  font-size: 20px;
 }
 
 p {
   font-family: var(--font-raleway), sans-serif;
-  font-size: 14px;
-  line-height: 1.25;
+  font-size: 17px;
   font-weight: 400;
+  line-height: 1.7;
+}
+
+section {
+  padding: 100px 0px;
 }

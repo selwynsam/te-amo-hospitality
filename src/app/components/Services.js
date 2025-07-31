@@ -8,7 +8,9 @@ export default function Services() {
         <div className={styles.servicesUnderline}></div>
         <div className={styles.servicesGrid}>
           <div className={styles.serviceItem}>
-            <div className={styles.serviceIcon}>🏠</div>
+            <div className={styles.serviceIcon}>
+              <img src="https://images.cdn-files-a.com/ready_uploads/media/2707778/400_5e274af0e9f51.jpg"></img>
+            </div>
             <h3>Luxury Studio Apartment Rentals</h3>
             <p>
               Te Amo Hospitality offers luxurious and fully furnished studio
@@ -16,7 +18,9 @@ export default function Services() {
             </p>
           </div>
           <div className={styles.serviceItem}>
-            <div className={styles.serviceIcon}>⭐</div>
+            <div className={styles.serviceIcon}>
+              <img src="https://files.cdn-files-a.com/ready_uploads/media/14933319/400_672e577e17110.jpg"></img>
+            </div>
             <h3>Luxury Apartment Stays</h3>
             <p>
               Experience unmatched comfort and convenience with our luxury
