@@ -35,7 +35,7 @@
   left: 0;
 } */
 
-.heroBackgroundText {
+/* .heroBackgroundText {
   position: absolute;
   font-size: 180px;
   font-weight: 300;
@@ -48,7 +48,7 @@
   white-space: nowrap;
   z-index: 1;
   user-select: none;
-}
+} */
 
 .heroContent {
   position: relative;
@@ -77,4 +77,17 @@
   max-width: 380px;
   font-family: var(--font-raleway), sans-serif;
   font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    margin-left: 0;
+    text-align: center;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+  }
 }
