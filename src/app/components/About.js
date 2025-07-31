@@ -1,12 +1,13 @@
+import Carousel from "@/components/carousel/Carousel";
 import styles from "./About.module.css";
 
 export default function About() {
   return (
     <section id="about" className={styles.aboutSection}>
-      <div className={styles.container}>
+      <div data-aos="fade-up" className={styles.container}>
         <div className={styles.aboutContent}>
           <div className={styles.aboutText}>
-            <h2>About The Website</h2>
+            <h2>About Us</h2>
             <p>
               Welcome to Te Amo Hospitality, where exceptional service meets the
               comforts of home. We specialize in providing premium service
@@ -16,7 +17,9 @@ export default function About() {
               convenience, and hospitality excellence.
             </p>
           </div>
-          <div className={styles.aboutImage}></div>
+          <div>
+            <Carousel />
+          </div>
         </div>
       </div>
     </section>

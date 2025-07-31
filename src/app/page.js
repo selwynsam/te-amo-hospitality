@@ -6,9 +6,18 @@ import { useEffect, useState, useRef } from "react";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Cover from "@/components/cover/Cover";
 
 export default function Home() {
   useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100, // trigger 100px before element comes into view
+    });
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
@@ -43,21 +52,9 @@ export default function Home() {
     };
   }, []);
 
-  const handleContactSubmit = (e) => {
-    e.preventDefault();
-    alert("Thank you for your message! We will get back to you soon.");
-  };
-
-  const handleSite123Click = () => {
-    alert("Redirecting to SITE123...");
-  };
-
-  const handleCreateWebsiteClick = () => {
-    alert("Create your website with SITE123!");
-  };
-
   return (
     <>
+      <Cover opened />
       <Header />
       <Hero />
       <About />

@@ -19,12 +19,10 @@
 }
 
 .aboutText h2 {
-  font-size: 32px;
-  font-weight: 400;
-  color: #333;
   margin-bottom: 25px;
   position: relative;
-  padding-bottom: 15px;
+  line-height: 2.5;
+  font-size: 35px;
 }
 
 .aboutText h2::after {
@@ -33,15 +31,15 @@
   bottom: 0;
   left: 0;
   width: 60px;
-  height: 3px;
-  background: #4a90e2;
+  height: 5px;
+  background: #000;
 }
 
 .aboutText p {
-  font-size: 14px;
-  color: #666;
+  font-size: 20px;
   line-height: 1.7;
-  text-align: justify;
+  font-weight: 400;
+  color: #323232;
 }
 
 .aboutImage {

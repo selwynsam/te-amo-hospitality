@@ -1,0 +1,16 @@
+.embla {
+  overflow: hidden;
+}
+.container {
+  display: flex;
+}
+.slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

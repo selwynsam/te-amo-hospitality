@@ -10,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html dir="ltr" lang="en" className={fonts}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <div id="modal-root" />
+      </body>
     </html>
   );
 }
