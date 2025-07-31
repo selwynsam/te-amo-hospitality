@@ -39,7 +39,7 @@ export const raleway = Raleway({
 
 export const caladea = Caladea({
   // 1. Specify the weights you want to use
-  weight: ["400"],
+  weight: ["400", "700"],
 
   // 2. Specify the styles you want
   style: ["normal", "italic"],

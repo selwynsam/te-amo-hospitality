@@ -10,9 +10,9 @@ export default function Footer() {
         <div className={styles.container}>
           <div className={styles.footerContent}>
             <div className={styles.footerLeft}>
-              <div className={styles.companyName}>Te Amo Hospitality</div>
+              <h2 className={styles.companyName}>Te Amo Hospitality</h2>
               <div className={styles.poweredBy}>
-                Powered by SITE123 - Make your own website
+                Copyright © 2025 All rights reserved
               </div>
             </div>
             <div className={styles.footerRight}>

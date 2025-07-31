@@ -1,6 +1,11 @@
 "use client";
 import { useEffect, useRef } from "react";
 import styles from "./Header.module.css";
+import { TiLocationArrow } from "react-icons/ti";
+import { IoShareSocialSharp } from "react-icons/io5";
+import { TbMailFilled } from "react-icons/tb";
+import { FaPhoneAlt } from "react-icons/fa";
+import IconButton from "@/components/Button/IconButton";
 
 const Header = () => {
   const headerRef = useRef(null);
@@ -41,15 +46,26 @@ const Header = () => {
         </nav>
 
         <div className={styles.logoContainer}>
-          <div className={styles.logoCircle}></div>
+          <div className={styles.logoCircle}>
+            <img src="https://files.cdn-files-a.com/uploads/11056245/400_filter_nobg_6888415a9132a.png" />
+          </div>
         </div>
 
         <div className={styles.navRight}>
           <a href="#contact">Contact</a>
           <div className={styles.socialIcons}>
-            <span>📞</span>
-            <span>📧</span>
-            <span>🌐</span>
+            <IconButton className={styles.locationIcon}>
+              <TiLocationArrow />
+            </IconButton>
+            <IconButton className={styles.shareIcon}>
+              <IoShareSocialSharp className="share" />
+            </IconButton>
+            <IconButton className={styles.shareIcon}>
+              <TbMailFilled className="mail" />
+            </IconButton>
+            <IconButton className={styles.phoneIcon}>
+              <FaPhoneAlt className="phone" />
+            </IconButton>
           </div>
         </div>
       </div>

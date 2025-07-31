@@ -62,9 +62,6 @@ export default function Home() {
 
       <Contact />
 
-      {/* Map Section */}
-      <section className="map-section"></section>
-
       <Footer />
     </>
   );

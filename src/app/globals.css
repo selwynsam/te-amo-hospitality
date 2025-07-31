@@ -27,3 +27,7 @@ p {
 section {
   padding: 100px 0px;
 }
+
+a {
+  font-family: var(--font-caladea), Arial, sans-serif;
+}

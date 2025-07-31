@@ -1,4 +1,7 @@
 import styles from "./Contact.module.css";
+import { FaPhoneAlt, FaRegClock } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
+import { RiInstagramLine } from "react-icons/ri";
 
 export default function Contact() {
   const handleContactSubmit = () => {
@@ -12,14 +15,24 @@ export default function Contact() {
         <div className={styles.contactUnderline}></div>
         <div className={styles.contactContent}>
           <div className={styles.contactInfo}>
-            <p>
+            <div>
               2nd Flr, Bombay Building, Ruben Road, Near Seven Junction,
               Assagaon,
-            </p>
-            <p>Vagator, Goa - 403507</p>
-            <p className={styles.phone}>📞 +91 8408963843</p>
-            <p className={styles.email}>📧 teamohospitality@gmail.com</p>
-            <p className={styles.website}>🌐 24hrs</p>
+            </div>
+            <div>Vagator, Goa - 403507</div>
+
+            <div className={styles.info}>
+              <FaPhoneAlt />
+              +91 8408963843
+            </div>
+
+            <div className={styles.info}>
+              <AiOutlineMail /> teamohospitality@gmail.com
+            </div>
+
+            <div className={styles.info}>
+              <FaRegClock /> 24hrs
+            </div>
 
             <div className={styles.contactDescription}>
               <p>
@@ -30,7 +43,13 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className={styles.instagramIcon}>📷</div>
+            <a
+              className={styles.instagramIcon}
+              href="https://www.instagram.com/te_amo_hospitality"
+              target="_blank"
+            >
+              <RiInstagramLine />
+            </a>
           </div>
 
           <div className={styles.contactForm}>
@@ -53,6 +72,18 @@ export default function Contact() {
             </button>
           </div>
         </div>
+      </div>
+      {/* ======================= GOOGLE MAPS ==================== */}
+      <div className={styles.map}>
+        <iframe
+          src="https://maps.google.com/maps?q=2nd+Off+Assagaon+Badem+Rd+Vagator,+Assagao,Goa-+403507@15.605865,73.755008&z=15&output=embed&disableDefaultUI=true&zoomControl=false&mapTypeControl=false&streetViewControl=false&fullscreenControl=false"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </section>
   );
