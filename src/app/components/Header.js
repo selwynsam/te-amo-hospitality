@@ -52,7 +52,7 @@ const Header = () => {
 
           <div className={styles.logoContainer}>
             <div className={styles.logoCircle}>
-              <img src="https://files.cdn-files-a.com/uploads/11056245/400_filter_nobg_6888415a9132a.png" />
+              <img src="/logo.webp" />
             </div>
           </div>
 

@@ -1,7 +1,7 @@
 import useEmblaCarousel from "embla-carousel-react";
 import styles from "./Carousel.module.css";
 
-export default function Carousel({ slides = [1, 2, 3, 4] }) {
+export default function Carousel({ slides = [] }) {
   const [emblaRef] = useEmblaCarousel({ loop: false });
 
   return (
@@ -9,7 +9,7 @@ export default function Carousel({ slides = [1, 2, 3, 4] }) {
       <div className={styles.container}>
         {slides.map((slide, index) => (
           <div className={styles.slide} key={index}>
-            <img src="https://files.cdn-files-a.com/uploads/11056245/800_68883a9dbba16.jpg" />
+            <img src={slide.src} />
           </div>
         ))}
       </div>
