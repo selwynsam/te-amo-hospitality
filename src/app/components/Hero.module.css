@@ -47,6 +47,10 @@
     width: 100%;
   }
 
+  .heroSection {
+    padding-top: 20px !important;
+  }
+
   .heroTitle {
     font-size: 32px;
   }

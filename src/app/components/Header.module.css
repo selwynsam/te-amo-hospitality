@@ -8,6 +8,10 @@
   transition: padding 0.3s, box-shadow 0.3s;
 }
 
+.mobileHeader {
+  display: none;
+}
+
 .headerScrolled {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 10px;
@@ -93,8 +97,11 @@
 }
 
 @media (max-width: 768px) {
-  .logoCircle {
-    width: 40px !important;
-    height: 40px !important;
+  .mobileHeader {
+    display: unset;
+  }
+
+  .header {
+    display: none;
   }
 }

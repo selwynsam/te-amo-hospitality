@@ -2,7 +2,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import styles from "./Carousel.module.css";
 
 export default function Carousel({ slides = [1, 2, 3, 4] }) {
-  const [emblaRef] = useEmblaCarousel({ loop: true });
+  const [emblaRef] = useEmblaCarousel({ loop: false });
 
   return (
     <div className={styles.embla} ref={emblaRef}>

@@ -1,11 +1,18 @@
 .root {
   position: fixed;
   inset: 0;
-  background-color: #000;
+  background-color: hsl(0, 0%, 9%);
   z-index: 1001;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+
+.root.show {
+  height: 100%;
 }
 
 .close {
@@ -15,13 +22,6 @@
 }
 
 .close svg {
-  width: 60px;
-  height: 60px;
+  font-size: 40px;
   fill: #fff;
 }
-
-/* .main {
-  border: 1px solid #fff;
-  height: 300px;
-  width: 300px;
-} */

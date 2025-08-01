@@ -11,8 +11,8 @@ export default function RootLayout({ children }) {
   return (
     <html dir="ltr" lang="en" className={fonts}>
       <body>
-        {children}
         <div id="modal-root" />
+        {children}
       </body>
     </html>
   );
