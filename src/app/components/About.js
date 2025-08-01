@@ -4,7 +4,7 @@ import styles from "./About.module.css";
 export default function About() {
   return (
     <section id="about" className={styles.aboutSection}>
-      <div data-aos="fade-up" className="container">
+      <div data-aos="slide-up" className="container">
         <div className={styles.aboutContent}>
           <div className={styles.aboutText}>
             <h2>About Us</h2>

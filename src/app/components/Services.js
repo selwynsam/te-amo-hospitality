@@ -3,7 +3,7 @@ import styles from "./Services.module.css";
 export default function Services() {
   return (
     <section id="services" className={styles.servicesSection}>
-      <div className="container">
+      <div data-aos="slide-up" className="container">
         <h2 className={styles.servicesTitle}>SERVICES</h2>
         <div className={styles.servicesUnderline}></div>
         <div className={styles.servicesGrid}>
