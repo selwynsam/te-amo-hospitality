@@ -10,7 +10,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className={styles.contactSection}>
-      <div className={styles.container}>
+      <div className="container">
         <h2 className={styles.contactTitle}>CONTACT</h2>
         <div className={styles.contactUnderline}></div>
         <div className={styles.contactContent}>

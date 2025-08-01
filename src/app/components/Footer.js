@@ -7,7 +7,7 @@ export default function Footer() {
       {/* <div className={styles.mapSection}></div> */}
 
       <footer className={styles.footer}>
-        <div className={styles.container}>
+        <div className="container">
           <div className={styles.footerContent}>
             <div className={styles.footerLeft}>
               <h2 className={styles.companyName}>Te Amo Hospitality</h2>

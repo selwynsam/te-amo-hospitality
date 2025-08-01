@@ -5,12 +5,6 @@
   background: #fff;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
 .aboutContent {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -55,5 +49,13 @@
   .aboutContent {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .carousel {
+    order: 1;
+  }
+
+  .aboutText {
+    order: 2;
   }
 }
