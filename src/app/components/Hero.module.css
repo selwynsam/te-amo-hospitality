@@ -1,0 +1,57 @@
+.heroSection {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-image: url("https://files.cdn-files-a.com/uploads/11056245/2000_68883c1d0c0b3.jpg");
+  padding-bottom: unset;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heroContent {
+  width: 50%;
+  height: 100%;
+  background-color: #ebedf0bf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.heroTitle {
+  color: #444950;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  font-family: var(--font-crimson), sans-serif;
+  font-style: italic;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.heroSubtitle {
+  font-size: 20px;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  max-width: 380px;
+  font-family: var(--font-raleway), sans-serif;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    width: 100%;
+  }
+
+  .heroSection {
+    padding-top: 20px !important;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+  }
+}
