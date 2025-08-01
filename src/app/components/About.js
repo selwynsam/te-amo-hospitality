@@ -1,6 +1,8 @@
 import Carousel from "@/components/carousel/Carousel";
 import styles from "./About.module.css";
 
+const SLIDES = [{ src: "/room1.webp" }];
+
 export default function About() {
   return (
     <section id="about" className={styles.aboutSection}>
@@ -18,7 +20,7 @@ export default function About() {
             </p>
           </div>
           <div className={styles.carousel}>
-            <Carousel />
+            <Carousel slides={SLIDES} />
           </div>
         </div>
       </div>

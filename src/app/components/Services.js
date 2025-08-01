@@ -9,7 +9,7 @@ export default function Services() {
         <div className={styles.servicesGrid}>
           <div className={styles.serviceItem}>
             <div className={styles.serviceIcon}>
-              <img src="https://images.cdn-files-a.com/ready_uploads/media/2707778/400_5e274af0e9f51.jpg"></img>
+              <img src="rentals-placeholder.webp"></img>
             </div>
             <h3>Luxury Studio Apartment Rentals</h3>
             <p>
@@ -19,7 +19,7 @@ export default function Services() {
           </div>
           <div className={styles.serviceItem}>
             <div className={styles.serviceIcon}>
-              <img src="https://files.cdn-files-a.com/ready_uploads/media/14933319/400_672e577e17110.jpg"></img>
+              <img src="stay-placeholder.webp"></img>
             </div>
             <h3>Luxury Apartment Stays</h3>
             <p>
