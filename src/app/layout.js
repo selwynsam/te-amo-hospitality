@@ -32,7 +32,7 @@ export const metadata = {
     card: "summary_large_image",
     title: info.name,
     description: info.description,
-    images: [`${siteInfo.url}/hero.webp`],
+    images: [`${info.url}/hero.webp`],
   },
 };
 
