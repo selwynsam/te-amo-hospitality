@@ -14,8 +14,6 @@ export default function Cover({ opened = false, onClose, children }) {
     setTargetEle(document.getElementById("modal-root"));
   }, []);
 
-  console.log({ targetEle });
-
   if (!targetEle) return null;
 
   return createPortal(

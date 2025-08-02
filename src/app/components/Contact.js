@@ -4,14 +4,59 @@ import { AiOutlineMail } from "react-icons/ai";
 import { RiInstagramLine } from "react-icons/ri";
 
 export default function Contact() {
-  const handleContactSubmit = () => {
-    // Your submit logic here
+  const validateForm = (data) => {
+    const newErrors = {};
+    if (!data.name.trim()) newErrors.name = "Name is required";
+    if (!data.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(data.email)) {
+      newErrors.email = "Email address is invalid";
+    }
+    if (!data.message.trim()) newErrors.message = "Message is required";
+
+    const isValid = Object.keys(newErrors).length === 0;
+
+    if (!isValid) {
+      alert(JSON.stringify(newErrors));
+    }
+
+    return isValid;
+  };
+
+  const handleContactSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const submittedData = Object.fromEntries(formData.entries());
+    console.log("Data captured from the event:", submittedData);
+
+    if (validateForm(submittedData)) {
+      console.log("Form is valid, creating email...");
+
+      const subject = encodeURIComponent(
+        `Contact Form Submission from ${submittedData.name}`
+      );
+      const body = encodeURIComponent(
+        `Name: ${submittedData.name}\n` +
+          `Phone: ${submittedData.phone}\n` +
+          `Email: ${submittedData.email}\n\n` +
+          `Message:\n${submittedData.message}`
+      );
+
+      // Replace 'your-email@example.com' with your actual email address
+      window.location.href = `mailto:teamohospitality@gmail.com?subject=${subject}&body=${body}`;
+
+      // Optional: Reset the form fields after successful submission
+      form.reset();
+    } else {
+      console.log("Form has validation errors.");
+    }
   };
 
   return (
     <section id="contact" className={styles.contactSection}>
       <div className="container" data-aos="slide-up">
-        <h2 className={styles.contactTitle}>CONTACT</h2>
+        <h2 className={styles.contactTitle}>CONTACT US</h2>
         <div className={styles.contactUnderline}></div>
         <div className={styles.contactContent}>
           <div className={styles.contactInfo}>
@@ -52,25 +97,34 @@ export default function Contact() {
             </a>
           </div>
 
-          <div className={styles.contactForm}>
+          <form className={styles.contactForm} onSubmit={handleContactSubmit}>
             <div className={styles.formRow}>
               <div className={styles.formGroup}>
-                <input type="text" placeholder="Name" />
+                <input type="text" name="name" placeholder="Name" required />
               </div>
               <div className={styles.formGroup}>
-                <input type="tel" placeholder="Phone" />
+                <input type="tel" name="phone" placeholder="Phone" />
               </div>
             </div>
             <div className={styles.formGroup}>
-              <input type="email" placeholder="Email address" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required
+              />
             </div>
             <div className={styles.formGroup}>
-              <textarea placeholder="Message"></textarea>
+              <textarea
+                name="message"
+                placeholder="Message"
+                required
+              ></textarea>
             </div>
-            <button className={styles.contactBtn} onClick={handleContactSubmit}>
-              CONTACT US
+            <button type="submit" className={styles.contactBtn}>
+              Submit
             </button>
-          </div>
+          </form>
         </div>
       </div>
       {/* ======================= GOOGLE MAPS ==================== */}
