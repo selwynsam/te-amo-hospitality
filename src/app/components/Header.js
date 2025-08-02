@@ -29,6 +29,10 @@ const Header = () => {
     };
   }, []);
 
+  const jumpToSection = (sectionId) => {
+    window.location.hash = sectionId;
+  };
+
   return (
     <>
       <div className={styles.mobileHeader}>
@@ -59,16 +63,28 @@ const Header = () => {
           <div className={styles.navRight}>
             <a href="#contact">Contact</a>
             <div className={styles.socialIcons}>
-              <IconButton className={styles.locationIcon}>
+              <IconButton
+                className={styles.locationIcon}
+                onClick={() => jumpToSection("contact")}
+              >
                 <TiLocationArrow />
               </IconButton>
               <IconButton className={styles.shareIcon}>
-                <IoShareSocialSharp className="share" />
+                <IoShareSocialSharp
+                  className="share"
+                  onClick={() => jumpToSection("contact")}
+                />
               </IconButton>
-              <IconButton className={styles.shareIcon}>
+              <IconButton
+                className={styles.shareIcon}
+                onClick={() => jumpToSection("contact")}
+              >
                 <TbMailFilled className="mail" />
               </IconButton>
-              <IconButton className={styles.phoneIcon}>
+              <IconButton
+                className={styles.phoneIcon}
+                onClick={() => jumpToSection("contact")}
+              >
                 <FaPhoneAlt className="phone" />
               </IconButton>
             </div>
