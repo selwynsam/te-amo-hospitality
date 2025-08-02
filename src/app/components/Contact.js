@@ -61,7 +61,7 @@ export default function Contact() {
         <div className={styles.contactContent}>
           <div className={styles.contactInfo}>
             <div>
-              2nd Flr, Bombay Building, Ruben Road, Near Seven Junction,
+              2nd Flr, Rushivar Building, Badem Road, Near Sorro Junction,
               Assagaon,
             </div>
             <div>Vagator, Goa - 403507</div>
