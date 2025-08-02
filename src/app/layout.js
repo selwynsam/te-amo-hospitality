@@ -19,7 +19,7 @@ export const metadata = {
     siteName: info.name,
     images: [
       {
-        url: `${siteInfo.url}/hero.webp`,
+        url: `${info.url}/hero.webp`,
         width: 1200,
         height: 630,
         alt: info.title,
